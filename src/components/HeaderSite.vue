@@ -8,6 +8,8 @@
         <img :src="hamburgerIcon" alt="Menu" />
       </div>
     </div>
+    <!-- TODO: Make mobile menu by design -->
+    <!-- TODO: Setup ESLint and Prettier, and use .husky to run before commit -->
     <!-- <MobileMenu /> -->
   </header>
 </template>
