@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import TestFile from './components/TestFile.vue'
+import HeaderSite from './components/HeaderSite.vue'
 </script>
 
 <template>
-  <TestFile />
+  <main>
+    <HeaderSite />
+  </main>
 </template>
 
 <style scoped></style>
