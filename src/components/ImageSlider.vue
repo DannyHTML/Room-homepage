@@ -1,16 +1,21 @@
 <template>
   <Carousel ref="carousel" v-bind="carouselConfig">
-    <Slide v-for="(image, index) in images" :key="index">
+    <Slide aria-label="Image slide" v-for="(image, index) in images" :key="index">
       <picture class="h-full w-full">
         <source :srcset="image.desktop" media="(min-width: 768px)" />
         <img :src="image.mobile" :alt="`Image ${index + 1}`" class="h-full w-full object-cover" />
       </picture>
     </Slide>
-
+    <!-- TODO: Write more tests. Check if buttons exist and if clicked on, the carousel moves to the correct slide -->
     <template #addons>
       <div class="absolute right-0 bottom-0">
-        <ButtonSlider @click="prevSlide" :icon="iconLeft" />
-        <ButtonSlider @click="nextSlide" :icon="iconRight" />
+        <ButtonSlider
+          aria-label="Previous slide"
+          role="button"
+          @click="prevSlide"
+          :icon="iconLeft"
+        />
+        <ButtonSlider aria-label="Next slide" role="button" @click="nextSlide" :icon="iconRight" />
       </div>
     </template>
   </Carousel>
