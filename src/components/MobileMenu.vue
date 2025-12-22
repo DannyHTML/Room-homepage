@@ -11,7 +11,7 @@
       <div
         role="menu"
         aria-label="Mobile navigation"
-        class="fixed top-0 right-0 h-26 w-full bg-white"
+        class="fixed top-0 right-0 h-26 w-full bg-white md:hidden"
       >
         <div class="container flex h-full items-center justify-between">
           <ul class="">
