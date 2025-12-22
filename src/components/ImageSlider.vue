@@ -8,10 +8,9 @@
     </Slide>
 
     <template #addons>
-      <!-- TODO: Create custom navigation buttons, 1 button component -->
       <div class="absolute right-0 bottom-0">
-        <button @click="carousel!.prev()">Prev</button>
-        <button @click="carousel!.next()">Next</button>
+        <ButtonSlider @click="prevSlide" :icon="iconLeft" />
+        <ButtonSlider @click="nextSlide" :icon="iconRight" />
       </div>
     </template>
   </Carousel>
@@ -21,8 +20,14 @@
 import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel';
 import 'vue3-carousel/carousel.css';
 import { ref } from 'vue';
+import ButtonSlider from './ButtonSlider.vue';
+import iconLeft from '@/assets/images/icon-angle-left.svg';
+import iconRight from '@/assets/images/icon-angle-right.svg';
 
 const carousel = ref<InstanceType<typeof Carousel> | null>(null);
+
+const nextSlide = () => carousel.value?.next();
+const prevSlide = () => carousel.value?.prev();
 
 defineProps<{
   images: {
@@ -34,7 +39,7 @@ defineProps<{
 const carouselConfig = {
   itemsToShow: 1,
   wrapAround: true,
-  autoplay: 1000,
+  // autoplay: 1000,
   pauseAutoplayOnHover: true,
   transition: 800,
 };
