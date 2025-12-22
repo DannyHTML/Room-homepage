@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel';
+import { Carousel, Slide } from 'vue3-carousel';
 import 'vue3-carousel/carousel.css';
 import { ref } from 'vue';
 import ButtonSlider from './ButtonSlider.vue';
