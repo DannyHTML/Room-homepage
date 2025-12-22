@@ -2,7 +2,7 @@
   <header class="fixed top-0 flex h-20 w-full items-center bg-orange-500">
     <div class="container flex items-center">
       <div class="flex w-full justify-center md:items-center md:justify-start">
-        <span class="mr-25">
+        <span class="md:mr-25">
           <img :src="logo" alt="Logo" class="md:w-22" />
         </span>
         <DesktopMenu :menuItems="menuItems" class="hidden md:flex" />
