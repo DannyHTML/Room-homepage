@@ -5,17 +5,25 @@
         <img :src="logo" class="" alt="Logo" />
       </div>
       <div class="absolute right-5 md:hidden">
-        <img :src="hamburgerIcon" alt="Menu" />
+        <img :src="hamburgerIcon" alt="Menu" @click="toggleMenu" />
       </div>
     </div>
-    <!-- TODO: Make mobile menu by design -->
-    <!-- TODO: Setup ESLint and Prettier, and use .husky to run before commit -->
-    <!-- <MobileMenu /> -->
+    <MobileMenu :menuItems="menuItems" :closeIcon="closeIcon" :open="open" @close="toggleMenu" />
   </header>
 </template>
 
 <script setup lang="ts">
-import logo from '@/assets/images/logo.svg'
-import hamburgerIcon from '@/assets/images/icon-hamburger.svg'
-// import MobileMenu from './MobileMenu.vue'
+import logo from '@/assets/images/logo.svg';
+import hamburgerIcon from '@/assets/images/icon-hamburger.svg';
+import MobileMenu from './MobileMenu.vue';
+import closeIcon from '@/assets/images/icon-close.svg';
+import { ref } from 'vue';
+
+const open = ref(false);
+
+const menuItems = ['home', 'shop', 'about', 'contact'];
+
+const toggleMenu = () => {
+  open.value = !open.value;
+};
 </script>

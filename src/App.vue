@@ -2,6 +2,8 @@
 import HeaderSite from './components/HeaderSite.vue'
 </script>
 
+<!-- TODO: Write tests! Vitest. -->
+
 <template>
   <main>
     <HeaderSite />
