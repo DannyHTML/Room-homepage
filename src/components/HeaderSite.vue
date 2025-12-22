@@ -3,7 +3,6 @@
     <div class="container flex items-center">
       <div class="flex w-full justify-center md:justify-start">
         <img :src="logo" class="" alt="Logo" />
-        <p>You did it!</p>
       </div>
       <div class="absolute right-5 md:hidden">
         <img :src="hamburgerIcon" alt="Menu" />
