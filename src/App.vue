@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HeaderSite from './components/HeaderSite.vue'
+import HeaderSite from './components/HeaderSite.vue';
 </script>
 
 <!-- TODO: Write tests! Vitest. -->

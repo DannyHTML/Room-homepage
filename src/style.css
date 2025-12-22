@@ -11,6 +11,6 @@
   --font-league-spartan: 'League Spartan', sans-serif;
 }
 
-.container {
+@utility container {
   @apply mx-auto px-4;
 }
