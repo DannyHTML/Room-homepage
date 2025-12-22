@@ -15,7 +15,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix --cache",
-    "format": "prettier --write \"src/**/*.{vue,ts,js,css,scss}\" \"tests/**/*.{vue,ts,js,css,scss}\""
+    "format": "prettier --write \"src/**/*.{vue,ts,js,css,scss}\" \"src/__tests__/**/*.{vue,ts,js,css,scss}\""
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
@@ -35,6 +35,7 @@
     "@vue/tsconfig": "^0.8.1",
     "eslint": "^9.39.1",
     "eslint-plugin-vue": "~10.5.1",
+    "husky": "^9.1.7",
     "jiti": "^2.6.1",
     "jsdom": "^27.2.0",
     "npm-run-all2": "^8.0.4",

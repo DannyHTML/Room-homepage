@@ -2,8 +2,6 @@
   <div class="container">Mobile Menu</div>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-</script>
+<script setup lang="ts"></script>
 
 <style scoped></style>

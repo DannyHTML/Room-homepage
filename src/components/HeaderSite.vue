@@ -17,5 +17,5 @@
 <script setup lang="ts">
 import logo from '@/assets/images/logo.svg'
 import hamburgerIcon from '@/assets/images/icon-hamburger.svg'
-import MobileMenu from './MobileMenu.vue'
+// import MobileMenu from './MobileMenu.vue'
 </script>
