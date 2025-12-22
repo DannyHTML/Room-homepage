@@ -8,7 +8,13 @@
         <DesktopMenu :menuItems="menuItems" class="hidden md:flex" />
       </div>
       <div class="absolute right-5 md:hidden">
-        <img :src="hamburgerIcon" alt="Menu" class="cursor-pointer" @click="toggleMenu" />
+        <button
+          aria-label="Open mobile menu"
+          class="cursor-pointer border-0 bg-transparent p-0"
+          @click="toggleMenu"
+        >
+          <img :src="hamburgerIcon" alt="Hamburger menu icon" />
+        </button>
       </div>
     </div>
     <MobileMenu :menuItems="menuItems" :closeIcon="closeIcon" :open="open" @close="toggleMenu" />

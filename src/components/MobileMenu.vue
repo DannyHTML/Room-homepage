@@ -8,19 +8,20 @@
     leave-to-class="opacity-0 transform -translate-y-4"
   >
     <template v-if="open">
-      <div class="fixed top-0 right-0 h-26 w-full bg-white">
+      <div
+        role="menu"
+        aria-label="Mobile navigation"
+        class="fixed top-0 right-0 h-26 w-full bg-white"
+      >
         <div class="container flex h-full items-center justify-between">
           <ul class="">
             <a href="#" class="flex gap-4"
               ><li v-for="item in menuItems" class="font-bold" :key="item">{{ item }}</li></a
             >
           </ul>
-          <img
-            :src="closeIcon"
-            alt="Close icon"
-            class="h-4 cursor-pointer"
-            @click="$emit('close')"
-          />
+          <button aria-label="Close mobile menu" @click="$emit('close')">
+            <img :src="closeIcon" alt="Close icon" />
+          </button>
         </div>
         <div class="bg-grey-800/70 absolute top-26 right-0 h-dvh w-full"></div>
       </div>
