@@ -1,5 +1,7 @@
 <template>
-  <ImageSlider :images="images" />
+  <div class="md:container">
+    <ImageSlider :images="images" />
+  </div>
 </template>
 
 <script setup lang="ts">
