@@ -27,11 +27,12 @@ import hamburgerIcon from '@/assets/images/icon-hamburger.svg';
 import MobileMenu from './MobileMenu.vue';
 import closeIcon from '@/assets/images/icon-close.svg';
 import { ref } from 'vue';
+import data from '@/assets/data/content.json';
 import DesktopMenu from './DesktopMenu.vue';
 
 const open = ref(false);
 
-const menuItems = ['home', 'shop', 'about', 'contact'];
+const menuItems = data.header.menuItems;
 
 const toggleMenu = () => {
   open.value = !open.value;
