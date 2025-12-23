@@ -16,6 +16,4 @@ const images = [
   { mobile: MobileHeroImg2, desktop: DesktopHeroImg2 },
   { mobile: MobileHeroImg3, desktop: DesktopHeroImg3 },
 ];
-
-console.log(images);
 </script>
