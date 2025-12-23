@@ -12,11 +12,16 @@
       <div class="absolute right-0 bottom-0">
         <ButtonSlider
           aria-label="Previous slide"
-          role="button"
+          role="Previous button"
           @click="prevSlide"
           :icon="iconLeft"
         />
-        <ButtonSlider aria-label="Next slide" role="button" @click="nextSlide" :icon="iconRight" />
+        <ButtonSlider
+          aria-label="Next slide"
+          role="Next button"
+          @click="nextSlide"
+          :icon="iconRight"
+        />
       </div>
     </template>
   </Carousel>
