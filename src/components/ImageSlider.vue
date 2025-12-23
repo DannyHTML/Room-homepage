@@ -28,14 +28,14 @@
 </template>
 
 <script setup lang="ts">
-import { Carousel, Slide } from 'vue3-carousel';
+import { Carousel, Slide, type CarouselExposed } from 'vue3-carousel';
 import 'vue3-carousel/carousel.css';
 import { ref } from 'vue';
 import ButtonSlider from './ButtonSlider.vue';
 import iconLeft from '@/assets/images/icon-angle-left.svg';
 import iconRight from '@/assets/images/icon-angle-right.svg';
 
-const carousel = ref<InstanceType<typeof Carousel> | null>(null);
+const carousel = ref<CarouselExposed | null>(null);
 
 const nextSlide = () => carousel.value?.next();
 const prevSlide = () => carousel.value?.prev();
