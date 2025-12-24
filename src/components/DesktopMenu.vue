@@ -1,5 +1,5 @@
 <template>
-  <ul class="gap-8 text-xl text-white">
+  <ul class="gap-4 text-lg text-white lg:gap-6">
     <li v-for="item in menuItems" :key="item.title">
       <a
         :href="item.url"

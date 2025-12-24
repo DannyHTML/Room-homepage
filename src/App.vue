@@ -2,10 +2,12 @@
 <template>
   <main>
     <HeaderSite />
-    <div class="md:container">
-      <ImageSlider :images="images" />
+    <div class="grid grid-cols-1 md:container md:grid-cols-2">
+      <div class="">
+        <ImageSlider :images="images" />
+      </div>
+      <MainSection :title="title" :description="description" :titleButton="buttonTitle" />
     </div>
-    <MainSection :title="title" :description="description" />
   </main>
 </template>
 
@@ -25,6 +27,7 @@ import data from '@/assets/data/content.json';
 
 const title = data.main.hero.title;
 const description = data.main.hero.description;
+const buttonTitle = data.main.hero.buttonText;
 
 // TODO: Add imageSlider, add footer section
 const images = [
