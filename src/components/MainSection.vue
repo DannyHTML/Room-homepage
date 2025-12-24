@@ -1,21 +1,27 @@
 <template>
-  <div class="md:container">
-    <ImageSlider :images="images" />
+  <div
+    class="container my-5 max-w-md md:py-0 lg:flex lg:max-w-xl lg:items-center lg:justify-center"
+  >
+    <div>
+      <h1 class="text-4xl font-bold md:text-2xl xl:text-4xl">{{ title }}</h1>
+      <p class="text-grey-500 mt-4 mb-5">{{ description }}</p>
+
+      <ButtonMain :link="'#'" :title="titleButton">
+        <template #icon>
+          <img :src="arrowRight" alt="arrow right" />
+        </template>
+      </ButtonMain>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import ImageSlider from './ImageSlider.vue';
-import MobileHeroImg1 from '@/assets/images/mobile-image-hero-1.jpg';
-import MobileHeroImg2 from '@/assets/images/mobile-image-hero-2.jpg';
-import MobileHeroImg3 from '@/assets/images/mobile-image-hero-3.jpg';
-import DesktopHeroImg1 from '@/assets/images/desktop-image-hero-1.jpg';
-import DesktopHeroImg2 from '@/assets/images/desktop-image-hero-2.jpg';
-import DesktopHeroImg3 from '@/assets/images/desktop-image-hero-3.jpg';
+import ButtonMain from './ButtonMain.vue';
+import arrowRight from '@/assets/images/icon-arrow.svg';
 
-const images = [
-  { mobile: MobileHeroImg1, desktop: DesktopHeroImg1 },
-  { mobile: MobileHeroImg2, desktop: DesktopHeroImg2 },
-  { mobile: MobileHeroImg3, desktop: DesktopHeroImg3 },
-];
+defineProps<{
+  title: string;
+  description: string;
+  titleButton: string;
+}>();
 </script>

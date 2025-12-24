@@ -1,9 +1,9 @@
 <template>
-  <header class="fixed top-0 z-50 flex h-20 w-full items-center md:items-end md:pl-30">
+  <header class="fixed top-0 z-50 flex h-20 w-full items-center md:items-end">
     <div class="container flex items-center">
-      <div class="flex w-full justify-center md:items-center md:justify-start">
-        <span class="md:mr-25">
-          <img :src="logo" alt="Logo" class="md:w-22" />
+      <div class="flex w-full justify-center md:ml-5 md:items-center md:justify-start">
+        <span class="md:mr-5 lg:mr-20">
+          <img :src="logo" alt="Logo" class="md:w-18 lg:w-22" />
         </span>
         <DesktopMenu :menuItems="menuItems" class="hidden md:flex" />
       </div>
@@ -27,11 +27,12 @@ import hamburgerIcon from '@/assets/images/icon-hamburger.svg';
 import MobileMenu from './MobileMenu.vue';
 import closeIcon from '@/assets/images/icon-close.svg';
 import { ref } from 'vue';
+import data from '@/assets/data/content.json';
 import DesktopMenu from './DesktopMenu.vue';
 
 const open = ref(false);
 
-const menuItems = ['home', 'shop', 'about', 'contact'];
+const menuItems = data.header.menuItems;
 
 const toggleMenu = () => {
   open.value = !open.value;

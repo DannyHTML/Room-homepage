@@ -14,10 +14,10 @@
       class="fixed top-0 right-0 h-26 w-full bg-white md:hidden"
     >
       <div class="container flex h-full items-center justify-between">
-        <ul>
-          <a href="#" class="flex gap-4"
-            ><li v-for="item in menuItems" class="font-bold" :key="item">{{ item }}</li></a
-          >
+        <ul class="flex gap-3">
+          <li v-for="item in menuItems" class="font-bold" :key="item.title">
+            <a :href="item.url">{{ item.title }}</a>
+          </li>
         </ul>
         <button aria-label="Close mobile menu" @click="$emit('close')">
           <img :src="closeIcon" alt="Close icon" />
@@ -33,7 +33,7 @@
 
 <script setup lang="ts">
 defineProps<{
-  menuItems: string[];
+  menuItems: { title: string; url: string }[];
   closeIcon: string;
   open: boolean;
 }>();
