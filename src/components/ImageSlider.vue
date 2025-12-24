@@ -6,8 +6,6 @@
         <img :src="image.mobile" :alt="`Image ${index + 1}`" class="h-full w-full object-cover" />
       </picture>
     </Slide>
-    <!-- TODO: Write more tests. Check if buttons exist and if clicked on, the carousel moves to the correct slide -->
-    <!-- TODO: Look into playwright for e2e testing! Interesting tool for UI testing! -->
     <template #addons>
       <div class="absolute right-0 bottom-0 lg:right-0 lg:translate-x-full">
         <ButtonSlider

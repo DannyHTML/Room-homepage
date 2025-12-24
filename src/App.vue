@@ -1,12 +1,22 @@
 <!-- TODO: Write tests! Vitest. -->
 <template>
-  <main>
-    <HeaderSite />
-    <div class="grid grid-cols-1 md:container md:grid-cols-2">
-      <div class="">
+  <main class="justify-center md:items-center lg:flex lg:h-dvh">
+    <div>
+      <HeaderSite />
+      <div class="grid grid-cols-1 md:container md:grid-cols-2">
         <ImageSlider :images="images" />
+        <MainSection
+          :title="mainTitle"
+          :description="mainDescription"
+          :titleButton="mainButtonTitle"
+        />
       </div>
-      <MainSection :title="title" :description="description" :titleButton="buttonTitle" />
+      <AboutSection
+        :imageDark="aboutImageDark"
+        :imageLight="aboutImageLight"
+        :title="aboutTitle"
+        :description="aboutDescription"
+      />
     </div>
   </main>
 </template>
@@ -15,10 +25,15 @@
 import HeaderSite from '@/components/HeaderSite.vue';
 import ImageSlider from '@/components/ImageSlider.vue';
 import MainSection from '@/components/MainSection.vue';
+import AboutSection from './components/AboutSection.vue';
 import data from '@/assets/data/content.json';
 
-const title = data.main.hero.title;
-const description = data.main.hero.description;
-const buttonTitle = data.main.hero.buttonText;
+const mainTitle = data.main.title;
+const mainDescription = data.main.description;
+const mainButtonTitle = data.main.buttonText;
 const images = data.imageSlider.images;
+const aboutImageDark = data.about.imageDark;
+const aboutTitle = data.about.title;
+const aboutDescription = data.about.description;
+const aboutImageLight = data.about.imageLight;
 </script>

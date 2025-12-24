@@ -1,9 +1,14 @@
 <template>
-  <header class="fixed top-0 z-50 flex h-20 w-full items-center md:items-end">
+  <header
+    class="fixed top-0 z-50 flex h-20 w-full items-center transition lg:static"
+    :class="isScrolled ? 'bg-grey-500' : ''"
+  >
     <div class="container flex items-center">
-      <div class="flex w-full justify-center md:ml-5 md:items-center md:justify-start">
+      <div
+        class="flex w-full justify-center md:ml-5 md:items-center md:justify-start lg:justify-center"
+      >
         <span class="md:mr-5 lg:mr-20">
-          <img :src="logo" alt="Logo" class="md:w-18 lg:w-22" />
+          <img :src="logo" alt="Logo" class="md:w-18 lg:w-22 lg:invert" />
         </span>
         <DesktopMenu :menuItems="menuItems" class="hidden md:flex" />
       </div>
@@ -29,6 +34,9 @@ import closeIcon from '@/assets/images/icon-close.svg';
 import { ref } from 'vue';
 import data from '@/assets/data/content.json';
 import DesktopMenu from './DesktopMenu.vue';
+import { useScroll } from '@/composables/useScroll';
+
+const { isScrolled } = useScroll();
 
 const open = ref(false);
 
