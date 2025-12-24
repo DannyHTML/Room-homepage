@@ -3,11 +3,10 @@
   <main>
     <HeaderSite />
     <div class="grid grid-cols-1 md:container md:grid-cols-2">
-      <div class="">
-        <ImageSlider :images="images" />
-      </div>
+      <ImageSlider :images="images" />
       <MainSection :title="title" :description="description" :titleButton="buttonTitle" />
     </div>
+    <AboutSection />
   </main>
 </template>
 
@@ -15,6 +14,7 @@
 import HeaderSite from '@/components/HeaderSite.vue';
 import ImageSlider from '@/components/ImageSlider.vue';
 import MainSection from '@/components/MainSection.vue';
+import AboutSection from './components/AboutSection.vue';
 import data from '@/assets/data/content.json';
 
 const title = data.main.hero.title;
