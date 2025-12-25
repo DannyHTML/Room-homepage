@@ -27,13 +27,17 @@ import ImageSlider from '@/components/ImageSlider.vue';
 import MainSection from '@/components/MainSection.vue';
 import AboutSection from './components/AboutSection.vue';
 import data from '@/assets/data/content.json';
+import { imageMap } from '@/assets/images/imagesMap';
 
 const mainTitle = data.main.title;
 const mainDescription = data.main.description;
 const mainButtonTitle = data.main.buttonText;
-const images = data.imageSlider.images;
-const aboutImageDark = data.about.imageDark;
 const aboutTitle = data.about.title;
 const aboutDescription = data.about.description;
-const aboutImageLight = data.about.imageLight;
+
+const sliderKeys = ['hero-1', 'hero-2', 'hero-3'] as const;
+
+const images = sliderKeys.map((key) => imageMap[key]);
+const aboutImageDark = imageMap['about-dark'];
+const aboutImageLight = imageMap['about-light'];
 </script>

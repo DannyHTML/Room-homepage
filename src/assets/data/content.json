@@ -8,20 +8,7 @@
     ]
   },
   "imageSlider": {
-    "images": [
-      {
-        "mobile": "src/assets/images/mobile-image-hero-1.jpg",
-        "desktop": "src/assets/images/desktop-image-hero-1.jpg"
-      },
-      {
-        "mobile": "src/assets/images/mobile-image-hero-2.jpg",
-        "desktop": "src/assets/images/desktop-image-hero-2.jpg"
-      },
-      {
-        "mobile": "src/assets/images/mobile-image-hero-3.jpg",
-        "desktop": "src/assets/images/desktop-image-hero-3.jpg"
-      }
-    ]
+    "images": ["hero-1", "hero-2", "hero-3"]
   },
   "main": {
     "title": "Discover innovative ways to decorate",
@@ -31,7 +18,7 @@
   "about": {
     "title": "about our furniture",
     "description": "Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.",
-    "imageLight": "src/assets/images/image-about-light.jpg",
-    "imageDark": "src/assets/images/image-about-dark.jpg"
+    "imageLight": "about-image-light",
+    "imageDark": "about-image-dark"
   }
 }
